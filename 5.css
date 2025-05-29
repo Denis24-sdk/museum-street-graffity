@@ -1,0 +1,238 @@
+/* 5.css */
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* Разметка секции отзывов */
+.reviews-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/* Контейнер отзывов */
+.reviews-container {
+  flex: 1 1 600px;
+  max-width: 680px;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(255, 63, 63, 0.3);
+  overflow-y: auto;
+  max-height: 700px;
+  outline-offset: 3px;
+}
+
+/* Заголовок отзывов */
+.reviews-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff3f3f;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 10px rgba(255, 63, 63, 0.8);
+}
+
+/* Отдельный отзыв */
+.review {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.review:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Автор и подзаголовок */
+.review-author {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff4a4a;
+  margin-bottom: 4px;
+}
+
+.review-author-pod {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff6f6f;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* Текст отзыва */
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ddd;
+  user-select: text;
+}
+
+/* Контейнер формы отзыва */
+.review-form-container {
+  flex: 1 1 350px;
+  max-width: 400px;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(255, 63, 63, 0.3);
+  outline-offset: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Заголовок формы */
+.review-form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff3f3f;
+  margin: 0 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 8px rgba(255, 63, 63, 0.7);
+}
+
+/* Форма */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Поля ввода */
+.review-input,
+.review-textarea {
+  background-color: #222;
+  border: 2px solid #ff3f3f;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 1rem;
+  padding: 12px 15px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.review-input::placeholder,
+.review-textarea::placeholder {
+  color: #aa5555;
+  opacity: 1;
+}
+
+.review-input:focus,
+.review-textarea:focus {
+  border-color: #ff6f6f;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 111, 111, 0.7);
+}
+
+/* Кнопка отправки */
+.review-submit-button {
+  background: linear-gradient(90deg, #ff3f3f 0%, #ff6f6f 100%);
+  border: none;
+  border-radius: 12px;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  box-shadow: 0 4px 14px rgba(255, 63, 63, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-submit-button:hover,
+.review-submit-button:focus {
+  background: linear-gradient(90deg, #ff6f6f 0%, #ff3f3f 100%);
+  box-shadow: 0 6px 20px rgba(255, 111, 111, 0.9);
+  outline: none;
+}
+
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .reviews-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .reviews-container,
+  .review-form-container {
+    max-width: 100%;
+    flex: 1 1 auto;
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  .review-author {
+    font-size: 1.3rem;
+  }
+  .review-author-pod {
+    font-size: 0.9rem;
+  }
+  .review-text {
+    font-size: 1rem;
+  }
+  .review-form-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Стилизация скроллбара для WebKit-браузеров */
+.reviews-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.reviews-container::-webkit-scrollbar-track {
+  background: #1e1e1e; /* фон трека */
+  border-radius: 10px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff3f3f, #ff6f6f);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 63, 63, 0.8);
+  border: 2px solid #1e1e1e; /* небольшой отступ вокруг */
+}
+
+.reviews-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff6f6f, #ff3f3f);
+  box-shadow: 0 0 12px rgba(255, 111, 111, 1);
+}
+
+/* Стилизация скроллбара для Firefox */
+.reviews-container {
+  scrollbar-width: thin;
+  scrollbar-color: #ff4a4a #1e1e1e;
+}
+
+/* При наведении на контейнер можно чуть менять цвет скроллбара */
+.reviews-container:hover {
+  scrollbar-color: #ff6f6f #121212;
+}
+

@@ -1,0 +1,114 @@
+/* 4.css */
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* Заголовок страницы */
+.title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 40px 0 60px;
+  text-align: center;
+  color: #ff3f3f;
+  text-shadow: 0 2px 10px rgba(255, 63, 63, 0.8);
+}
+
+.title__text {
+  background: linear-gradient(90deg, #ff3f3f 0%, #ff6f6f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Секция галереи */
+.section--gallery {
+  margin-bottom: 60px;
+}
+
+/* Галерея - сетка */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Элемент галереи */
+.gallery__item {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(255, 63, 63, 0.3);
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline-offset: 3px;
+}
+
+.gallery__item:focus-within,
+.gallery__item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 63, 63, 0.7);
+}
+
+/* Изображение в элементе галереи */
+.gallery__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.gallery__image:hover,
+.gallery__image:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .gallery__item {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .gallery__item {
+    max-width: 100%;
+  }
+}
+

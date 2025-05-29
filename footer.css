@@ -1,0 +1,43 @@
+/* Футер */
+.footer {
+  background-color: #1b1b1b; /* тот же тёмный бордовый фон, что и в навигации */
+  color: #cc3434; /* светло-розовый текст */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px 12px 0 0; /* скругление сверху */
+  user-select: none;
+  box-shadow: 0 -2px 15px rgba(173, 15, 28, 0.8);
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Контейнер для элементов футера */
+.footer > * {
+  margin: 8px 0; /* вертикальные отступы между элементами */
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: #ff3f3f; /* яркий красный при наведении */
+  text-shadow: 0 0 8px #ff3f3f;
+  outline: none;
+}
+
+.footer img {
+  width: 4rem;
+}
+
+.contact-info-footer {
+  font-size: 2rem;
+  margin-top: -5px;
+}
+
+.section-footer-1 p {
+  margin: 0;
+}
+.section-footer-2 p {
+  margin: 0;
+}
+.section-footer-2 {
+  margin-top: 30px;
+}

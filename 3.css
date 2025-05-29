@@ -1,0 +1,173 @@
+/* 3.css */
+
+/* Общие настройки */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* Основной заголовок страницы */
+.title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 40px 0 60px;
+  text-align: center;
+  color: #ff3f3f;
+  text-shadow: 0 2px 8px rgba(255, 63, 63, 0.8);
+}
+
+.highlighted-text {
+  background: linear-gradient(90deg, #ff3f3f 0%, #ff6f6f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.main-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Секции */
+.section {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+
+/* Текстовая часть секций */
+.content {
+  flex: 1 1 580px;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1b1b1b 100%);
+  padding: 28px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(255, 63, 63, 0.25);
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  user-select: text;
+  overflow-wrap: break-word;
+}
+
+/* Заголовки глав */
+.chapter-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff4a4a;
+  border-bottom: 3px solid #ff3f3f;
+  padding-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+/* Текст глав */
+.chapter-text {
+  color: #ccc;
+}
+
+.chapter-text p {
+  margin-bottom: 1em;
+}
+
+/* Для списка в "Вымышленные персонажи" */
+.chapter-text li {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  list-style-type: disc;
+  color: #ff6f6f;
+  font-weight: 600;
+}
+
+/* Блоки с изображениями */
+.photo-tp,
+.images-block,
+.photo-tr {
+  flex: 1 1 380px;
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.photo-tp img,
+.images-block img,
+.photo-tr img {
+  width: 90%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(255, 63, 63, 0.4);
+  object-fit: cover;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-tp img:hover,
+.images-block img:hover,
+.photo-tr img:hover,
+.photo-tp img:focus,
+.images-block img:focus,
+.photo-tr img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 63, 63, 0.7);
+  outline: none;
+}
+
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .content,
+  .photo-tp,
+  .images-block,
+  .photo-tr {
+    flex: 1 1 100%;
+  }
+
+  .photo-tp img,
+  .images-block img,
+  .photo-tr img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-tp img,
+  .images-block img,
+  .photo-tr img {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    font-size: 1rem;
+    padding: 20px 18px;
+  }
+}
+

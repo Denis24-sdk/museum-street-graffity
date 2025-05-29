@@ -1,0 +1,141 @@
+/* Фиксированная навигация сверху */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 7%;
+  width: 86%;
+  background-color: #1b1b1b; 
+  padding: 3px 20px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 15px rgba(179, 14, 28, 0.8);
+  z-index: 1000;
+  user-select: none;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* Список навигации */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1300px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Ссылки навигации */
+.nav-link {
+  display: inline-block;
+  padding: 10px 18px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ff6f6fcc; /* светло-розовый с прозрачностью */
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  user-select: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #ff3f3f; /* яркий красный */
+  color: #fff;
+  border-color: #ff3f3f;
+  box-shadow: 0 0 12px #ff3f3f;
+  outline: none;
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  background-color: #ff5a5a; /* насыщенный розово-красный */
+  color: #fff;
+  border-color: #ff5a5a;
+  box-shadow: 0 0 15px #ff5a5a;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Отступ сверху для основного контейнера */
+.container {
+  margin-top: 60px;
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* лого и название слева */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* лого слева, меню справа */
+  background-color: #1b1b1b; /* тёмный бордовый фон */
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(170, 10, 50, 0.8);
+  user-select: none;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* расстояние между логотипом и названием */
+}
+
+.nav-logo {
+  height: 40px; /* можно подстроить размер */
+  width: auto;
+  border-radius: 6px; /* скругление углов логотипа */
+}
+
+.nav-title {
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ff6f6f; /* светло-розовый */
+  user-select: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: #ff6f6f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  color: #ff3f3f;
+  text-shadow: 0 0 8px #ff3f3f;
+  outline: none;
+}
+

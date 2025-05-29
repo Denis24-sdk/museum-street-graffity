@@ -1,0 +1,243 @@
+/* index.css */
+
+/* Общие настройки */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* Контактная информация */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.contact-info span {
+  color: #bbb;
+}
+
+.phone-contact {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.phone-contact a {
+  color: #ff3f3f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.phone-contact a:hover,
+.phone-contact a:focus {
+  color: #ff6f6f;
+  outline: none;
+}
+
+.phone-contact span {
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* Заголовки музея */
+.museum-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  color: #ff3f3f;
+  text-shadow: 0 2px 6px rgba(255,63,63,0.7);
+}
+
+.museum-subtitle {
+  font-size: 2.8rem;
+  font-style: italic;
+  color: #ff6f6f;
+  margin-top: 0;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #ccc;
+  border-left: 4px solid #ff3f3f;
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+/* Раздел "Преимущества нашего музея" */
+.section-header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #ff3f3f;
+  padding-bottom: 8px;
+  letter-spacing: 0.05em;
+  color: #ff3f3f;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.advantage-item {
+  background: #1e1e1e;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 8px rgba(255, 63, 63, 0.2),
+    inset 0 0 10px rgba(255, 63, 63, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.advantage-item:hover,
+.advantage-item:focus-within {
+  transform: translateY(-6px);
+  box-shadow:
+    0 8px 20px rgba(255, 63, 63, 0.4),
+    inset 0 0 15px rgba(255, 63, 63, 0.25);
+  outline: none;
+}
+
+.advantage-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ff5a5a;
+}
+
+.advantage-desc {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+/* Раздел "О музее" */
+.about-text {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1b1b1b 100%);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 63, 63, 0.25);
+  margin-bottom: 50px;
+  color: #ddd;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+}
+
+/* Галерея */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 32%;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 10px rgba(255, 63, 63, 0.3);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover,
+.gallery img:focus {
+  transform: scale(1.05);
+  box-shadow:
+    0 8px 25px rgba(255, 63, 63, 0.6);
+  outline: none;
+}
+
+/* Часто задаваемые вопросы */
+.faq-item {
+  background: #1e1e1e;
+  margin-bottom: 18px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow:
+    0 2px 8px rgba(255, 63, 63, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.faq-item h3 {
+  font-size: 1.25rem;
+  color: #ff4a4a;
+  margin-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 48%;
+  }
+
+  .advantages {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%;
+  }
+
+  .advantages {
+    grid-template-columns: 1fr;
+  }
+}
+
