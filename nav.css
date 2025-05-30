@@ -137,7 +137,7 @@
 @media (max-width: 700px) {
   .burger {
     display: block;
-    margin-right: 3rem;
+    margin-right: 2.5rem;
   }
 
   /* Меню скрыто по умолчанию */
@@ -192,7 +192,7 @@
   }
 
   .museum-title {
-  margin-top: 10%;
+  margin-top: 15%;
   font-size: 200%;
 }
 }
